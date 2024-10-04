@@ -1,20 +1,13 @@
 module.exports = {
-  root: true,
-  env: {
-    es6: true,
-    node: true,
-  },
-  parser: 'babel-eslint', // Add this line to use the Babel parser
-  extends: [
-    '@react-native',        
-    'eslint:recommended',   
-    'plugin:react/recommended',
-  ],
+  parser: '@babel/eslint-parser',
   parserOptions: {
-    ecmaVersion: 2020,
-    sourceType: 'module',
+    requireConfigFile: false, // Optional: if you don't have a Babel config
+    ecmaVersion: 2020, // Use the version you are using
+    sourceType: 'module', // Use 'module' for ES modules
   },
+  // Add your ESLint rules and other configurations here
   rules: {
-    // Your custom ESLint rules go here
+    // Example rules
+    'react/react-in-jsx-scope': 'off', // If you are using React 17+
   },
 };
